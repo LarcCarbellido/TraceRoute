@@ -1,0 +1,429 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ruta del mapa</title>
+  <meta name="author" content="Larc Carbellid - Code Development">
+	<meta name="description" content="">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+	<link rel="stylesheet" href="example.css">
+	<style>
+		.custom-menu {
+			display: none;
+			z-index: 1000;
+			position: absolute;
+			overflow: hidden;
+			border: 1px solid #CCC;
+			white-space: nowrap;
+			font-family: sans-serif;
+			background: #FFF;
+			color: #333;
+			border-radius: 5px;
+			padding: 0;
+		}
+
+		/* Each of the items in the list */
+		.custom-menu li {
+			padding: 8px 12px;
+			cursor: pointer;
+			list-style-type: none;
+		}
+
+		.custom-menu li:hover {
+			background-color: #DEF;
+		}
+	</style>
+</head>
+<body style="font-size: 10pt">
+	<ul class='custom-menu'>
+		<li data-action="source">Imposta come sorgente</li>
+		<li data-action="sink">Imposta come destinazione</li>
+	</ul>
+	<div id="content">
+		<div id="mapLoading">Cargando</div>
+		<div id="myMaps">
+		</div>
+		<div id="controls">
+			<button id="mapa0">Mapa 1</button>
+			<button id="mapa1">Mapa 2</button>
+			 <label for="beginSelect">Ruta de: </label>
+      <select id="beginSelect">
+          <option value="s1" selected>s1</option>
+          <option value="s2">s2</option>
+          <option value="s3">s3</option>
+          <option value="s4">s4</option>
+          <option value="s5">s5</option>
+          <option value="s6">s6</option>
+          <option value="s7">s7</option>
+          <option value="s8">s8</option>
+          <option value="s9">s9</option>
+          <option value="s10">s10</option>
+          <option value="s11">s11</option>
+          <option value="s12">s12</option>
+          <option value="s13">s13</option>
+          <option value="s14">s14</option>
+          <option value="s15">s15</option>
+          <option value="s16">s16</option>
+          <option value="s17">s17</option>
+          <option value="s18">s18</option>
+          <option value="s19">s19</option>
+          <option value="s20">s20</option>
+          <option value="s21">s21</option>
+          <option value="s22">s22</option>
+          <option value="s23">s23</option>
+          <option value="s24">s24</option>
+          <option value="s25">s25</option>
+          <option value="s26">s26</option>
+          <option value="s27">s27</option>
+          <option value="s28">s28</option>
+          <option value="s29">s29</option>
+          <option value="s30">s30</option>
+          <option value="s31">s31</option>
+          <option value="s32">s32</option>
+          <option value="s33">s33</option>
+          <option value="s34">s34</option>
+          <option value="s35">s35</option>
+          <option value="s36">s36</option>
+          <option value="s37">s37</option>
+          <option value="s38">s38</option>
+          <option value="s39">s39</option>
+          <option value="s40">s40</option>
+          <option value="s41">s41</option>
+          <option value="s42">s42</option>
+          <option value="s43">s43</option>
+          <option value="s44">s44</option>
+          <option value="s45">s45</option>
+          <option value="s46">s46</option>
+          <option value="s47">s47</option>
+          <option value="s48">s48</option>
+          <option value="s49">s49</option>
+          <option value="s50">s50</option>
+          <option value="s51">s51</option>
+          <option value="s52">s52</option>
+          <option value="s53">s53</option>
+          <option value="s54">s54</option>
+          <option value="s55">s55</option>
+          <option value="s56">s56</option>
+          <option value="s57">s57</option>
+          <option value="s58">s58</option>
+          <option value="s59">s59</option>
+          <option value="s60">s60</option>
+          <option value="s61">s61</option>
+          <option value="s62">s62</option>
+          <option value="s63">s63</option>
+          <option value="s64">s64</option>
+          <option value="s65">s65</option>
+          <option value="s66">s66</option>
+          <option value="s67">s67</option>
+          <option value="s68">s68</option>
+          <option value="s69">s69</option>
+          <option value="s70">s70</option>
+          <option value="s71">s71</option>
+          <option value="s72">s72</option>
+          <option value="s73">s73</option>
+          <option value="s74">s74</option>
+          <option value="s75">s75</option>
+          <option value="s76">s76</option>
+          <option value="s77">s77</option>
+          <option value="s78">s78</option>
+          <option value="s79">s79</option>
+          <option value="s80">s80</option>
+          <option value="s81">s81</option>
+          <option value="s82">s82</option>
+          <option value="s83">s83</option>
+          <option value="s84">s84</option>
+          <option value="s85">s85</option>
+          <option value="s86">s86</option>
+          <option value="s87">s87</option>
+          <option value="s88">s88</option>
+          <option value="s89">s89</option>
+          <option value="s90">s90</option>
+          <option value="s91">s91</option>
+          <option value="s92">s92</option>
+          <option value="s93">s93</option>
+          <option value="s94">s94</option>
+          <option value="s95">s95</option>
+          <option value="s96">s96</option>
+          <option value="s97">s97</option>
+          <option value="s98">s98</option>
+          <option value="s99">s99</option>
+          <option value="s100">s100</option>
+          <option value="s101">s101</option>
+          <option value="s102">s102</option>
+          <option value="s103">s103</option>
+          <option value="s104">s104</option>
+          <option value="s105">s105</option>
+          <option value="s106">s106</option>
+          <option value="s107">s107</option>
+          <option value="s108">s108</option>
+          <option value="s109">s109</option>
+          <option value="s110">s110</option>
+          <option value="s111">s111</option>
+          <option value="s112">s112</option>
+          <option value="s113">s113</option>
+          <option value="s114">s114</option>
+          <option value="s115">s115</option>
+          <option value="s116">s116</option>
+          <option value="s117">s117</option>
+          <option value="s118">s118</option>
+          <option value="s119">s119</option>
+          <option value="s120">s120</option>
+          <option value="s121">s121</option>
+          <option value="s122">s122</option>
+          <option value="s123">s123</option>
+          <option value="s124">s124</option>
+          <option value="s125">s125</option>
+          <option value="s126">s126</option>
+          <option value="s127">s127</option>
+          <option value="s128">s128</option>
+          <option value="s129">s129</option>
+          <option value="s130">s130</option>
+          <option value="s131">s131</option>
+          <option value="s132">s132</option>
+          <option value="s133">s133</option>
+          <option value="s134">s134</option>
+          <option value="s135">s135</option>
+          <option value="s136">s136</option>
+          <option value="s137">s137</option>
+          <option value="s138">s138</option>
+          <option value="s139">s139</option>
+          <option value="s140">s140</option>
+          <option value="s141">s141</option>
+          <option value="s142">s142</option>
+          <option value="s143">s143</option>
+          <option value="s144">s144</option>
+          <option value="s145">s145</option>
+          <option value="s146">s146</option>
+          <option value="s147">s147</option>
+          <option value="s148">s148</option>
+          <option value="s149">s149</option>
+          <option value="s150">s150</option>
+          <option value="s151">s151</option>
+          <option value="s152">s152</option>
+          <option value="s153">s153</option>
+          <option value="s154">s154</option>
+          <option value="s155">s155</option>
+          <option value="s156">s156</option>
+          <option value="s157">s157</option>
+          <option value="s158">s158</option>
+          <option value="s159">s159</option>
+          <option value="s160">s160</option>
+          <option value="s161">s161</option>
+          <option value="s162">s162</option>
+          <option value="s163">s163</option>
+          <option value="s164">s164</option>
+          <option value="s165">s165</option>
+          <option value="s166">s166</option>
+          <option value="s167">s167</option>
+          <option value="s168">s168</option>
+          <option value="s169">s169</option>
+          <option value="s170">s170</option>
+          <option value="s171">s171</option>
+          <option value="s172">s172</option>
+          <option value="s173">s173</option>
+          <option value="s174">s174</option>
+          <option value="s175">s175</option>
+          <option value="s176">s176</option>
+          <option value="s177">s177</option>
+          <option value="s178">s178</option>
+          <option value="s179">s179</option>
+          <option value="s180">s180</option>
+      </select>
+      <label for="endSelect">Ir a: </label>
+      <select id="endSelect">
+          <option value="s1" selected>s1</option>
+          <option value="s2">s2</option>
+          <option value="s3">s3</option>
+          <option value="s4">s4</option>
+          <option value="s5">s5</option>
+          <option value="s6">s6</option>
+          <option value="s7">s7</option>
+          <option value="s8">s8</option>
+          <option value="s9">s9</option>
+          <option value="s10">s10</option>
+          <option value="s11">s11</option>
+          <option value="s12">s12</option>
+          <option value="s13">s13</option>
+          <option value="s14">s14</option>
+          <option value="s15">s15</option>
+          <option value="s16">s16</option>
+          <option value="s17">s17</option>
+          <option value="s18">s18</option>
+          <option value="s19">s19</option>
+          <option value="s20">s20</option>
+          <option value="s21">s21</option>
+          <option value="s22">s22</option>
+          <option value="s23">s23</option>
+          <option value="s24">s24</option>
+          <option value="s25">s25</option>
+          <option value="s26">s26</option>
+          <option value="s27">s27</option>
+          <option value="s28">s28</option>
+          <option value="s29">s29</option>
+          <option value="s30">s30</option>
+          <option value="s31">s31</option>
+          <option value="s32">s32</option>
+          <option value="s33">s33</option>
+          <option value="s34">s34</option>
+          <option value="s35">s35</option>
+          <option value="s36">s36</option>
+          <option value="s37">s37</option>
+          <option value="s38">s38</option>
+          <option value="s39">s39</option>
+          <option value="s40">s40</option>
+          <option value="s41">s41</option>
+          <option value="s42">s42</option>
+          <option value="s43">s43</option>
+          <option value="s44">s44</option>
+          <option value="s45">s45</option>
+          <option value="s46">s46</option>
+          <option value="s47">s47</option>
+          <option value="s48">s48</option>
+          <option value="s49">s49</option>
+          <option value="s50">s50</option>
+          <option value="s51">s51</option>
+          <option value="s52">s52</option>
+          <option value="s53">s53</option>
+          <option value="s54">s54</option>
+          <option value="s55">s55</option>
+          <option value="s56">s56</option>
+          <option value="s57">s57</option>
+          <option value="s58">s58</option>
+          <option value="s59">s59</option>
+          <option value="s60">s60</option>
+          <option value="s61">s61</option>
+          <option value="s62">s62</option>
+          <option value="s63">s63</option>
+          <option value="s64">s64</option>
+          <option value="s65">s65</option>
+          <option value="s66">s66</option>
+          <option value="s67">s67</option>
+          <option value="s68">s68</option>
+          <option value="s69">s69</option>
+          <option value="s70">s70</option>
+          <option value="s71">s71</option>
+          <option value="s72">s72</option>
+          <option value="s73">s73</option>
+          <option value="s74">s74</option>
+          <option value="s75">s75</option>
+          <option value="s76">s76</option>
+          <option value="s77">s77</option>
+          <option value="s78">s78</option>
+          <option value="s79">s79</option>
+          <option value="s80">s80</option>
+          <option value="s81">s81</option>
+          <option value="s82">s82</option>
+          <option value="s83">s83</option>
+          <option value="s84">s84</option>
+          <option value="s85">s85</option>
+          <option value="s86">s86</option>
+          <option value="s87">s87</option>
+          <option value="s88">s88</option>
+          <option value="s89">s89</option>
+          <option value="s90">s90</option>
+          <option value="s91">s91</option>
+          <option value="s92">s92</option>
+          <option value="s93">s93</option>
+          <option value="s94">s94</option>
+          <option value="s95">s95</option>
+          <option value="s96">s96</option>
+          <option value="s97">s97</option>
+          <option value="s98">s98</option>
+          <option value="s99">s99</option>
+          <option value="s100">s100</option>
+          <option value="s101">s101</option>
+          <option value="s102">s102</option>
+          <option value="s103">s103</option>
+          <option value="s104">s104</option>
+          <option value="s105">s105</option>
+          <option value="s106">s106</option>
+          <option value="s107">s107</option>
+          <option value="s108">s108</option>
+          <option value="s109">s109</option>
+          <option value="s110">s110</option>
+          <option value="s111">s111</option>
+          <option value="s112">s112</option>
+          <option value="s113">s113</option>
+          <option value="s114">s114</option>
+          <option value="s115">s115</option>
+          <option value="s116">s116</option>
+          <option value="s117">s117</option>
+          <option value="s118">s118</option>
+          <option value="s119">s119</option>
+          <option value="s120">s120</option>
+          <option value="s121">s121</option>
+          <option value="s122">s122</option>
+          <option value="s123">s123</option>
+          <option value="s124">s124</option>
+          <option value="s125">s125</option>
+          <option value="s126">s126</option>
+          <option value="s127">s127</option>
+          <option value="s128">s128</option>
+          <option value="s129">s129</option>
+          <option value="s130">s130</option>
+          <option value="s131">s131</option>
+          <option value="s132">s132</option>
+          <option value="s133">s133</option>
+          <option value="s134">s134</option>
+          <option value="s135">s135</option>
+          <option value="s136">s136</option>
+          <option value="s137">s137</option>
+          <option value="s138">s138</option>
+          <option value="s139">s139</option>
+          <option value="s140">s140</option>
+          <option value="s141">s141</option>
+          <option value="s142">s142</option>
+          <option value="s143">s143</option>
+          <option value="s144">s144</option>
+          <option value="s145">s145</option>
+          <option value="s146">s146</option>
+          <option value="s147">s147</option>
+          <option value="s148">s148</option>
+          <option value="s149">s149</option>
+          <option value="s150">s150</option>
+          <option value="s151">s151</option>
+          <option value="s152">s152</option>
+          <option value="s153">s153</option>
+          <option value="s154">s154</option>
+          <option value="s155">s155</option>
+          <option value="s156">s156</option>
+          <option value="s157">s157</option>
+          <option value="s158">s158</option>
+          <option value="s159">s159</option>
+          <option value="s160">s160</option>
+          <option value="s161">s161</option>
+          <option value="s162">s162</option>
+          <option value="s163">s163</option>
+          <option value="s164">s164</option>
+          <option value="s165">s165</option>
+          <option value="s166">s166</option>
+          <option value="s167">s167</option>
+          <option value="s168">s168</option>
+          <option value="s169">s169</option>
+          <option value="s170">s170</option>
+          <option value="s171">s171</option>
+          <option value="s172">s172</option>
+          <option value="s173">s173</option>
+          <option value="s174">s174</option>
+          <option value="s175">s175</option>
+          <option value="s176">s176</option>
+          <option value="s177">s177</option>
+          <option value="s178">s178</option>
+          <option value="s179">s179</option>
+          <option value="s180">s180</option>
+      </select>
+			<!--
+			<label for="accessible">Accessible</label>
+			<input id="accessible" type="checkbox" name="accessible" value="Accessible" />
+			-->
+		</div>
+	</div>
+	
+	<script src="jquery-1.11.1.js"></script>
+	<script src="d3.v3.min.js"></script>
+	<script src="jquery.wayfinding.js"></script>
+	<script src="script.js"></script>
+  
+</body>
+</html>
